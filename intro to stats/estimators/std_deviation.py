@@ -1,0 +1,12 @@
+from math import sqrt
+
+def mean(data):
+    return sum(data)/len(data)
+def variance(data):
+    mu=mean(data)
+    return mean([(x-mu)**2 for x in data])
+def stddev(data):
+    return sqrt(variance(data))
+
+print(stddev([13.04, 1.32, 22.65, 17.44, 29.54, 23.22, 17.65, 10.12, 26.73, 16.43]))
+
